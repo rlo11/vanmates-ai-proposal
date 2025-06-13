@@ -64,14 +64,14 @@
         .logo {
             width: 400px;
             height: 160px;
-            background: white;
+            background: transparent;
+            border: none;
+            box-shadow: none;
             border-radius: 10px;
             display: flex;
             align-items: center;
             justify-content: center;
             margin: 0 auto 40px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-            border: 3px solid white;
         }
 
         .cover-title {
@@ -398,9 +398,68 @@
                 grid-template-columns: 1fr;
             }
             
+            /* Mobile-specific table styles */
+            .table-header {
+                display: none; /* Hide the header on mobile */
+            }
+            
             .table-row {
-                grid-template-columns: 1fr;
-                gap: 10px;
+                display: block; /* Stack items vertically */
+                padding: 25px 20px;
+                border-bottom: 2px solid #eee;
+                margin-bottom: 10px;
+            }
+            
+            .table-row:nth-child(even) {
+                background: #f8f9ff;
+            }
+            
+            /* Style each cell as a labeled block */
+            .table-row > * {
+                display: block;
+                margin-bottom: 15px;
+                padding: 10px 0;
+            }
+            
+            /* Add labels before each cell on mobile */
+            .table-row > *:nth-child(1)::before {
+                content: "Aspect: ";
+                font-weight: bold;
+                color: #c85a54;
+                display: block;
+                margin-bottom: 5px;
+            }
+            
+            .table-row > *:nth-child(2)::before {
+                content: "Traditional Approach: ";
+                font-weight: bold;
+                color: #c85a54;
+                display: block;
+                margin-bottom: 5px;
+            }
+            
+            .table-row > *:nth-child(3)::before {
+                content: "AI-Assisted Approach: ";
+                font-weight: bold;
+                color: #c85a54;
+                display: block;
+                margin-bottom: 5px;
+            }
+            
+            /* Style the content */
+            .table-row > *:nth-child(1) {
+                font-size: 1.1rem;
+                font-weight: 600;
+                color: #2d3748;
+                border-bottom: 1px solid #ddd;
+                padding-bottom: 15px;
+            }
+            
+            .table-row > *:nth-child(2),
+            .table-row > *:nth-child(3) {
+                font-size: 0.95rem;
+                line-height: 1.5;
+                color: #4a5568;
             }
         }
 
@@ -439,9 +498,9 @@
     <div class="container">
         <!-- Cover Page -->
         <section id="cover" class="cover-page">
-    <div class="logo" style="background: transparent; border: none; box-shadow: none;">
-    <img src="vanmates-logo-400x250.png" alt="Vanmates Logo" style="max-width: 100%; max-height: 100%; object-fit: contain;">
-    </div>            
+            <div class="logo">
+                <img src="vanmates-logo-400x250.png" alt="Vanmates Logo" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+            </div>            
             <h1 class="cover-title">AI Transformation Proposal</h1>
             <p class="cover-subtitle">Comprehensive Digital Evolution Strategy</p>
             
@@ -656,3 +715,146 @@
                         <div class="stat-number">30%</div>
                         <h4>Cost Reduction</h4>
                         <p>Decrease in maintenance and operational costs</p>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">25%</div>
+                        <h4>Revenue Growth</h4>
+                        <p>Increase through optimized pricing and occupancy</p>
+                    </div>
+                </div>
+                
+                <h3 class="subsection-title">Financial Impact Summary</h3>
+                <div class="highlight-box">
+                    <h4><strong>Year 1 Benefits</strong></h4>
+                    <p>Cost savings from automation, improved customer satisfaction scores, reduced response times, and streamlined operations. Expected payback period: 8-12 months.</p>
+                </div>
+            </section>
+
+            <!-- Investment -->
+            <section id="investment" class="section">
+                <h2 class="section-title">Investment & Resources</h2>
+                
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <h4><strong>Human Resources</strong></h4>
+                        <p>1 AI Business Specialist (full-time), temporary access to existing team members for consultation, and optional contractor support for specialized tasks.</p>
+                    </div>
+                    <div class="stat-card">
+                        <h4><strong>Technology Stack</strong></h4>
+                        <p>Modern AI development tools, cloud infrastructure, standard software licenses, and integration platforms.</p>
+                    </div>
+                    <div class="stat-card">
+                        <h4><strong>Total Investment</strong></h4>
+                        <p>Significantly lower than traditional approach. Single specialist salary plus standard tool licensing.</p>
+                    </div>
+                    <div class="stat-card">
+                        <h4><strong>Risk Mitigation</strong></h4>
+                        <p>Phased approach allows for course correction, minimal upfront investment, and proven AI tools reduce technical risk.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Vision -->
+            <section id="vision" class="section">
+                <h2 class="section-title">Long-term Vision & Competitive Advantage</h2>
+                
+                <h3 class="subsection-title">Market Leadership Position</h3>
+                <p>By 2027, Vanmates will be recognized as Canada's most technologically advanced student accommodation provider, setting industry standards for customer experience and operational efficiency.</p>
+                
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <h4><strong>Scalability</strong></h4>
+                        <p>Platform designed to handle 10x current volume without proportional staff increases</p>
+                    </div>
+                    <div class="stat-card">
+                        <h4><strong>Expansion Ready</strong></h4>
+                        <p>Standardized processes enable rapid expansion to new cities and markets</p>
+                    </div>
+                    <div class="stat-card">
+                        <h4><strong>Data Advantage</strong></h4>
+                        <p>Rich analytics provide insights competitors can't match</p>
+                    </div>
+                    <div class="stat-card">
+                        <h4><strong>Innovation Culture</strong></h4>
+                        <p>Team equipped with AI tools becomes innovation-driven organization</p>
+                    </div>
+                </div>
+                
+                <div class="highlight-box">
+                    <h3><strong>Future Opportunities</strong></h3>
+                    <p>With a solid AI foundation, Vanmates can explore additional revenue streams: property management services for other landlords, licensing technology platform to competitors, and expanding into related markets like corporate housing.</p>
+                </div>
+            </section>
+
+            <!-- Conclusion -->
+            <section id="conclusion" class="section">
+                <h2 class="section-title">Conclusion & Next Steps</h2>
+                
+                <p>The student accommodation industry is at an inflection point. Companies that embrace AI-driven transformation now will dominate the market for the next decade. Those that wait will struggle to catch up as technology advances and customer expectations evolve.</p>
+                
+                <h3 class="subsection-title">Why Choose This Approach</h3>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <h4><strong>Proven Track Record</strong></h4>
+                        <p>Former Vanmates employee with deep understanding of operations and challenges</p>
+                    </div>
+                    <div class="stat-card">
+                        <h4><strong>Modern Solutions</strong></h4>
+                        <p>Leverage cutting-edge AI tools that didn't exist during previous transformation attempts</p>
+                    </div>
+                    <div class="stat-card">
+                        <h4><strong>Cost Effective</strong></h4>
+                        <p>Achieve enterprise-level transformation at a fraction of traditional costs</p>
+                    </div>
+                    <div class="stat-card">
+                        <h4><strong>Risk Mitigated</strong></h4>
+                        <p>Phased approach with immediate ROI and course correction opportunities</p>
+                    </div>
+                </div>
+                
+                <div class="highlight-box">
+                    <h3><strong>Immediate Next Steps</strong></h3>
+                    <p>1. Schedule initial consultation to assess current systems and priorities<br>
+                    2. Define Phase 1 scope and immediate quick wins<br>
+                    3. Begin team interviews and workflow documentation<br>
+                    4. Implement first automation tools within 30 days</p>
+                </div>
+                
+                <div class="cta-section">
+                    <h3>Ready to Transform Your Business?</h3>
+                    <p>Let's discuss how AI can revolutionize Vanmates' operations and position the company for unprecedented growth.</p>
+                    <a href="mailto:rogelio@example.com" class="cta-button">Schedule Consultation</a>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script>
+        function toggleNav() {
+            const navMenu = document.getElementById('navMenu');
+            if (navMenu.style.display === 'none' || navMenu.style.display === '') {
+                navMenu.style.display = 'block';
+            } else {
+                navMenu.style.display = 'none';
+            }
+        }
+
+        // Close nav when clicking outside
+        document.addEventListener('click', function(event) {
+            const navMenu = document.getElementById('navMenu');
+            const navToggle = document.querySelector('.nav-toggle');
+            
+            if (!navMenu.contains(event.target) && !navToggle.contains(event.target)) {
+                navMenu.style.display = 'none';
+            }
+        });
+
+        // Close nav when clicking on a nav item
+        document.querySelectorAll('.nav-item').forEach(item => {
+            item.addEventListener('click', function() {
+                document.getElementById('navMenu').style.display = 'none';
+            });
+        });
+    </script>
+</body>
+</html>
